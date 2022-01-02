@@ -8,4 +8,9 @@ public static class CliExitCodeProvider
     public const int Success = 0;
     public const int CatchallForGeneralErrors = 1;
     public const int ScriptTerminatedByControlC = 130;
+
+    public static bool IsSuccessfulCliExitCode(this int cliExitCode)
+    {
+        return cliExitCode == Success;
+    }
 }
